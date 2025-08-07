@@ -99,8 +99,8 @@ const Index = () => {
             🇮🇳 Made for Indian Exporters
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
-            India's First <span className="bg-gradient-primary bg-clip-text text-transparent">Multilingual</span>
-            <br />Export Management Platform
+            <span className="bg-gradient-primary bg-clip-text text-transparent">OneExportAI</span>
+            <br />India's First Multilingual Export Platform
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-slide-up">
             From zero export knowledge to global success. Complete AI-powered export solution with 
@@ -175,7 +175,7 @@ const Index = () => {
               Trusted by Exporters Across India
             </h2>
             <p className="text-lg text-muted-foreground">
-              See how ExportSetu is helping businesses export successfully
+              See how OneExportAI is helping businesses export successfully
             </p>
           </div>
           
@@ -214,7 +214,7 @@ const Index = () => {
             Ready to Start Your Export Journey?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of Indian exporters who have transformed their business with ExportSetu
+            Join thousands of Indian exporters who have transformed their business with OneExportAI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="xl" variant="secondary" className="bg-white text-primary hover:bg-white/90">
