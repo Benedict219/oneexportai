@@ -7,6 +7,11 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Documentation from "./pages/Documentation";
+import Insurance from "./pages/Insurance";
+import Buyers from "./pages/Buyers";
+import Analytics from "./pages/Analytics";
+import Logistics from "./pages/Logistics";
+import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +36,31 @@ const App = () => (
           <Route path="/documentation" element={
             <Layout showNavbar={true}>
               <Documentation />
+            </Layout>
+          } />
+          <Route path="/insurance" element={
+            <Layout showNavbar={true}>
+              <Insurance />
+            </Layout>
+          } />
+          <Route path="/buyers" element={
+            <Layout showNavbar={true}>
+              <Buyers />
+            </Layout>
+          } />
+          <Route path="/analytics" element={
+            <Layout showNavbar={true}>
+              <Analytics />
+            </Layout>
+          } />
+          <Route path="/logistics" element={
+            <Layout showNavbar={true}>
+              <Logistics />
+            </Layout>
+          } />
+          <Route path="/training" element={
+            <Layout showNavbar={true}>
+              <Training />
             </Layout>
           } />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
