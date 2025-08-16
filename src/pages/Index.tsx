@@ -107,14 +107,18 @@ const Index = () => {
             documentation, buyer discovery, ECGC integration, and training in your regional language.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="xl" className="bg-gradient-primary text-white shadow-strong hover:shadow-medium transform hover:scale-105 transition-all duration-200">
-              Start Your Export Journey
-              <TrendingUp className="w-5 h-5 ml-2" />
-            </Button>
-            <Button size="xl" variant="outline">
-              Watch Demo (हिंदी)
-              <Globe className="w-5 h-5 ml-2" />
-            </Button>
+            <Link to="/dashboard">
+              <Button size="xl" className="bg-gradient-primary text-white shadow-strong hover:shadow-medium transform hover:scale-105 transition-all duration-200">
+                Start Your Export Journey
+                <TrendingUp className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Link to="/training">
+              <Button size="xl" variant="outline">
+                Watch Demo (हिंदी)
+                <Globe className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
@@ -144,23 +148,35 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon;
+              const getFeatureLink = () => {
+                switch(feature.title) {
+                  case "Business Intelligence": return "/analytics";
+                  case "Buyer Discovery": return "/buyers";
+                  case "ECGC Integration": return "/insurance";
+                  case "Beginner Training": return "/training";
+                  default: return "/dashboard";
+                }
+              };
+              
               return (
-                <Card key={index} className="hover:shadow-medium transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <Icon className="w-8 h-8 text-primary" />
-                      <Badge variant="secondary" className="text-xs">
-                        {feature.highlight}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base leading-relaxed">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                <Link key={index} to={getFeatureLink()}>
+                  <Card className="hover:shadow-medium transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm cursor-pointer transform hover:scale-105">
+                    <CardHeader>
+                      <div className="flex items-center justify-between mb-2">
+                        <Icon className="w-8 h-8 text-primary" />
+                        <Badge variant="secondary" className="text-xs">
+                          {feature.highlight}
+                        </Badge>
+                      </div>
+                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base leading-relaxed">
+                        {feature.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
               );
             })}
           </div>
@@ -217,13 +233,17 @@ const Index = () => {
             Join thousands of Indian exporters who have transformed their business with OneExportAI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="xl" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-              Start Free Trial
-              <Zap className="w-5 h-5 ml-2" />
-            </Button>
-            <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10">
-              Schedule Demo Call
-            </Button>
+            <Link to="/dashboard">
+              <Button size="xl" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                Start Free Trial
+                <Zap className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Link to="/training">
+              <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10">
+                Schedule Demo Call
+              </Button>
+            </Link>
           </div>
           <p className="text-sm mt-6 opacity-80">
             ✓ 14-day free trial ✓ No credit card required ✓ Full multilingual support
