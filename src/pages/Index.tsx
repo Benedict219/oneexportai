@@ -92,15 +92,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
+      <section className="relative pt-20 pb-16 px-4 overflow-hidden animated-gradient">
+        <div className="absolute inset-0 bg-gradient-soft opacity-10"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="max-w-6xl mx-auto text-center relative z-10">
-          <Badge variant="secondary" className="mb-6 text-sm font-medium">
+          <Badge variant="secondary" className="mb-6 text-sm font-medium glass hover-glow pulse-glow">
             🇮🇳 Made for Indian Exporters
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">OneExportAI</span>
-            <br />India's First Multilingual Export Platform
+            <span className="gradient-text float">OneExportAI</span>
+            <br />
+            <span className="text-foreground">India's First Multilingual Export Platform</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-slide-up">
             From zero export knowledge to global success. Complete AI-powered export solution with 
@@ -108,13 +111,13 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link to="/dashboard">
-              <Button size="xl" className="bg-gradient-primary text-white shadow-strong hover:shadow-medium transform hover:scale-105 transition-all duration-200">
+              <Button size="xl" className="bg-gradient-primary text-white shadow-premium hover-lift btn-premium group">
                 Start Your Export Journey
-                <TrendingUp className="w-5 h-5 ml-2" />
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Button>
             </Link>
             <Link to="/training">
-              <Button size="xl" variant="outline">
+              <Button size="xl" variant="outline" className="glass hover-glow">
                 Watch Demo (हिंदी)
                 <Globe className="w-5 h-5 ml-2" />
               </Button>
@@ -124,9 +127,9 @@ const Index = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-3xl font-bold text-primary">{stat.number}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
+              <div key={index} className="text-center p-6 rounded-lg glass hover-lift">
+                <p className="text-3xl font-bold gradient-text mb-2">{stat.number}</p>
+                <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -134,11 +137,11 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-gradient-soft">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Everything You Need to Export Successfully
+              Everything You Need to <span className="gradient-text">Export Successfully</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive export management solution designed specifically for Indian businesses
@@ -160,17 +163,20 @@ const Index = () => {
               
               return (
                 <Link key={index} to={getFeatureLink()}>
-                  <Card className="hover:shadow-medium transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm cursor-pointer transform hover:scale-105">
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-2">
-                        <Icon className="w-8 h-8 text-primary" />
-                        <Badge variant="secondary" className="text-xs">
+                  <Card className="hover-lift hover-glow group bg-gradient-card border-0 shadow-soft overflow-hidden">
+                    <CardHeader className="relative">
+                      <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                      <div className="flex items-center justify-between mb-2 relative z-10">
+                        <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <Icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+                        </div>
+                        <Badge variant="secondary" className="text-xs font-semibold glass">
                           {feature.highlight}
                         </Badge>
                       </div>
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors">{feature.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="relative">
                       <CardDescription className="text-base leading-relaxed">
                         {feature.description}
                       </CardDescription>
@@ -184,11 +190,12 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-card opacity-50"></div>
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Trusted by Exporters Across India
+              Trusted by <span className="gradient-text">Exporters Across India</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               See how OneExportAI is helping businesses export successfully
@@ -197,22 +204,23 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-center space-x-1 mb-2">
+              <Card key={index} className="glass hover-lift hover-glow group shadow-premium">
+                <CardHeader className="relative">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-primary opacity-10 rounded-full blur-xl"></div>
+                  <div className="flex items-center space-x-1 mb-4 relative z-10">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current text-accent" />
+                      <Star key={i} className="w-5 h-5 fill-current text-accent group-hover:scale-110 transition-transform" style={{transitionDelay: `${i * 50}ms`}} />
                     ))}
                   </div>
-                  <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                  <CardDescription>{testimonial.location}</CardDescription>
+                  <CardTitle className="text-lg font-bold">{testimonial.name}</CardTitle>
+                  <CardDescription className="font-medium">{testimonial.location}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <blockquote className="text-sm mb-2 italic">
+                  <blockquote className="text-sm mb-3 italic leading-relaxed border-l-4 border-primary/20 pl-4">
                     "{testimonial.text}"
                   </blockquote>
                   {testimonial.translation && (
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-muted-foreground bg-muted/30 p-2 rounded">
                       Translation: "{testimonial.translation}"
                     </p>
                   )}
@@ -224,30 +232,44 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-hero text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your Export Journey?
+      <section className="py-20 px-4 bg-gradient-hero text-white relative overflow-hidden">
+        <div className="absolute inset-0 animated-gradient opacity-20"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
+            Ready to Start Your <span className="text-accent">Export Journey?</span>
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto animate-slide-up">
             Join thousands of Indian exporters who have transformed their business with OneExportAI
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link to="/dashboard">
-              <Button size="xl" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button size="xl" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-premium hover-lift btn-premium group">
                 Start Free Trial
-                <Zap className="w-5 h-5 ml-2" />
+                <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Button>
             </Link>
             <Link to="/training">
-              <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10 glass hover-glow">
                 Schedule Demo Call
               </Button>
             </Link>
           </div>
-          <p className="text-sm mt-6 opacity-80">
-            ✓ 14-day free trial ✓ No credit card required ✓ Full multilingual support
-          </p>
+          <div className="flex items-center justify-center gap-8 text-sm opacity-80 glass p-4 rounded-lg max-w-2xl mx-auto">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-accent" />
+              <span>14-day free trial</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-accent" />
+              <span>No credit card required</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-accent" />
+              <span>Full multilingual support</span>
+            </div>
+          </div>
         </div>
       </section>
     </div>

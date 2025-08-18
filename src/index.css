@@ -2,68 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* OneExportAI Design System
-All colors MUST be HSL. Professional business theme optimized for trust and efficiency.
+/* OneExportAI Professional Design System
+All colors MUST be HSL. Premium business theme with sophisticated gradients and shadows.
 */
 
 @layer base {
   :root {
-    /* Core backgrounds */
+    /* Core backgrounds - Subtle gradient feeling */
     --background: 210 20% 98%;
     --foreground: 210 20% 8%;
 
-    /* Cards and surfaces */
-    --card: 0 0% 100%;
+    /* Cards and surfaces - Elevated with subtle tinting */
+    --card: 210 20% 99%;
     --card-foreground: 210 20% 8%;
 
     /* Popovers and modals */
-    --popover: 0 0% 100%;
+    --popover: 210 20% 99%;
     --popover-foreground: 210 20% 8%;
 
-    /* Primary brand colors - Professional blue */
-    --primary: 213 94% 48%;
+    /* Primary brand colors - Vibrant professional blue */
+    --primary: 213 94% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 213 94% 43%;
-    --primary-light: 213 94% 95%;
+    --primary-hover: 213 94% 45%;
+    --primary-light: 213 94% 96%;
+    --primary-dark: 213 94% 35%;
 
-    /* Secondary colors - Success green */
-    --secondary: 142 71% 45%;
+    /* Secondary colors - Premium success green */
+    --secondary: 142 71% 47%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 142 71% 95%;
+    --secondary-light: 142 71% 96%;
+    --secondary-dark: 142 71% 35%;
 
-    /* Accent colors - Warning orange */
-    --accent: 25 95% 53%;
+    /* Accent colors - Premium gold/orange */
+    --accent: 35 91% 55%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 25 95% 95%;
+    --accent-light: 35 91% 96%;
+    --accent-dark: 35 91% 40%;
 
-    /* Muted colors */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted colors - Warmer undertones */
+    --muted: 210 30% 95%;
+    --muted-foreground: 215 20% 50%;
 
     /* Destructive colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs */
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 213 94% 48%;
+    /* Borders and inputs - Softer with color hint */
+    --border: 214 25% 88%;
+    --input: 214 25% 92%;
+    --ring: 213 94% 50%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 94% 48%), hsl(213 94% 38%));
-    --gradient-secondary: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 94% 48%), hsl(142 71% 45%));
+    /* Premium gradients with multiple stops */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 50%) 0%, hsl(213 94% 45%) 50%, hsl(213 94% 40%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(142 71% 47%) 0%, hsl(142 71% 42%) 50%, hsl(142 71% 37%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 50%) 0%, hsl(180 94% 50%) 50%, hsl(142 71% 47%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 91% 55%) 0%, hsl(35 91% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 20% 99%) 0%, hsl(210 30% 97%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(210 20% 96%) 100%);
     
-    /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(213 94% 48% / 0.1);
-    --shadow-medium: 0 4px 16px hsl(213 94% 48% / 0.15);
-    --shadow-strong: 0 8px 32px hsl(213 94% 48% / 0.2);
+    /* Professional shadows with color tinting */
+    --shadow-soft: 0 2px 8px hsl(213 50% 20% / 0.08), 0 1px 3px hsl(213 50% 20% / 0.12);
+    --shadow-medium: 0 4px 16px hsl(213 50% 20% / 0.12), 0 2px 8px hsl(213 50% 20% / 0.16);
+    --shadow-strong: 0 8px 32px hsl(213 50% 20% / 0.16), 0 4px 16px hsl(213 50% 20% / 0.20);
+    --shadow-glow: 0 0 20px hsl(213 94% 50% / 0.3);
+    --shadow-premium: 0 20px 40px hsl(213 50% 20% / 0.15), 0 8px 16px hsl(213 50% 20% / 0.10);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s ease-out;
+    /* Premium animations and transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.75rem;
+    --radius-large: 1.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -83,56 +94,64 @@ All colors MUST be HSL. Professional business theme optimized for trust and effi
   }
 
   .dark {
-    /* Core backgrounds */
-    --background: 210 20% 6%;
-    --foreground: 210 20% 95%;
+    /* Core backgrounds - Rich dark tones */
+    --background: 210 25% 6%;
+    --foreground: 210 20% 96%;
 
-    /* Cards and surfaces */
-    --card: 210 20% 8%;
-    --card-foreground: 210 20% 95%;
+    /* Cards and surfaces - Elevated dark */
+    --card: 210 25% 8%;
+    --card-foreground: 210 20% 96%;
 
     /* Popovers and modals */
-    --popover: 210 20% 8%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 210 25% 8%;
+    --popover-foreground: 210 20% 96%;
 
-    /* Primary brand colors */
-    --primary: 213 94% 55%;
-    --primary-foreground: 210 20% 6%;
-    --primary-hover: 213 94% 60%;
+    /* Primary brand colors - Brighter for dark mode */
+    --primary: 213 94% 58%;
+    --primary-foreground: 210 25% 6%;
+    --primary-hover: 213 94% 63%;
     --primary-light: 213 94% 15%;
+    --primary-dark: 213 94% 45%;
 
-    /* Secondary colors */
-    --secondary: 142 71% 50%;
-    --secondary-foreground: 210 20% 6%;
+    /* Secondary colors - Vibrant for dark */
+    --secondary: 142 71% 52%;
+    --secondary-foreground: 210 25% 6%;
     --secondary-light: 142 71% 15%;
+    --secondary-dark: 142 71% 40%;
 
-    /* Accent colors */
-    --accent: 25 95% 58%;
-    --accent-foreground: 210 20% 6%;
-    --accent-light: 25 95% 15%;
+    /* Accent colors - Gold that pops */
+    --accent: 35 91% 60%;
+    --accent-foreground: 210 25% 6%;
+    --accent-light: 35 91% 15%;
+    --accent-dark: 35 91% 45%;
 
-    /* Muted colors */
-    --muted: 210 20% 12%;
-    --muted-foreground: 215 16% 65%;
+    /* Muted colors - Better contrast */
+    --muted: 210 25% 12%;
+    --muted-foreground: 215 20% 68%;
 
     /* Destructive colors */
-    --destructive: 0 84% 65%;
-    --destructive-foreground: 210 20% 6%;
+    --destructive: 0 84% 68%;
+    --destructive-foreground: 210 25% 6%;
 
-    /* Borders and inputs */
-    --border: 210 20% 15%;
-    --input: 210 20% 15%;
-    --ring: 213 94% 55%;
+    /* Borders and inputs - Softer contrast */
+    --border: 210 25% 16%;
+    --input: 210 25% 14%;
+    --ring: 213 94% 58%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 94% 55%), hsl(213 94% 45%));
-    --gradient-secondary: linear-gradient(135deg, hsl(142 71% 50%), hsl(142 71% 40%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 94% 55%), hsl(142 71% 50%));
+    /* Premium dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 58%) 0%, hsl(213 94% 50%) 50%, hsl(213 94% 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(142 71% 52%) 0%, hsl(142 71% 45%) 50%, hsl(142 71% 38%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 58%) 0%, hsl(180 94% 55%) 50%, hsl(142 71% 52%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 91% 60%) 0%, hsl(35 91% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 25% 8%) 0%, hsl(210 30% 10%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(210 25% 8%) 0%, hsl(210 25% 6%) 100%);
     
-    /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
-    --shadow-strong: 0 8px 32px hsl(0 0% 0% / 0.5);
+    /* Dark mode shadows with depth */
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.4), 0 1px 3px hsl(0 0% 0% / 0.5);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.5), 0 2px 8px hsl(0 0% 0% / 0.6);
+    --shadow-strong: 0 8px 32px hsl(0 0% 0% / 0.6), 0 4px 16px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 20px hsl(213 94% 58% / 0.4);
+    --shadow-premium: 0 20px 40px hsl(0 0% 0% / 0.6), 0 8px 16px hsl(0 0% 0% / 0.5);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -151,5 +170,99 @@ All colors MUST be HSL. Professional business theme optimized for trust and effi
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Premium scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/30;
+  }
+}
+
+@layer utilities {
+  /* Premium hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-strong;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  .hover-scale {
+    @apply transition-all duration-200 hover:scale-105;
+  }
+
+  /* Glass morphism effects */
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-sm border border-white/10;
+  }
+
+  /* Premium gradient text */
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  /* Animated backgrounds */
+  .animated-gradient {
+    background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--primary)));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Premium button effects */
+  .btn-premium {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-white/20 translate-x-[-100%] transition-transform duration-300;
+  }
+
+  .btn-premium:hover::before {
+    @apply translate-x-[100%];
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
   }
 }
