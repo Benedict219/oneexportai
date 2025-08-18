@@ -100,12 +100,12 @@ const Index = () => {
           <Badge variant="secondary" className="mb-6 text-sm font-medium glass hover-glow pulse-glow">
             🇮🇳 Made for Indian Exporters
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 animate-fade-in">
             <span className="gradient-text float">OneExportAI</span>
             <br />
-            <span className="text-foreground">India's First Multilingual Export Platform</span>
+            <span className="text-foreground font-heading">India's First Multilingual Export Platform</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-slide-up font-sans leading-relaxed">
             From zero export knowledge to global success. Complete AI-powered export solution with 
             documentation, buyer discovery, ECGC integration, and training in your regional language.
           </p>
@@ -140,10 +140,10 @@ const Index = () => {
       <section className="py-20 px-4 bg-gradient-soft">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Everything You Need to <span className="gradient-text">Export Successfully</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+              Everything You Need to <span className="gradient-text text-display">Export Successfully</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans leading-relaxed">
               Comprehensive export management solution designed specifically for Indian businesses
             </p>
           </div>
@@ -174,7 +174,7 @@ const Index = () => {
                           {feature.highlight}
                         </Badge>
                       </div>
-                      <CardTitle className="text-xl group-hover:text-primary transition-colors">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors font-heading">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="relative">
                       <CardDescription className="text-base leading-relaxed">

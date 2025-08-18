@@ -169,8 +169,27 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    @apply font-display font-bold;
+    letter-spacing: -0.05em;
+  }
+
+  .text-display {
+    @apply font-display;
+    letter-spacing: -0.025em;
   }
 
   /* Premium scrollbar styling */
