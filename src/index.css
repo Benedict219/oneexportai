@@ -20,24 +20,24 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --popover: 210 20% 99%;
     --popover-foreground: 210 20% 8%;
 
-    /* Primary brand colors - Vibrant professional blue */
-    --primary: 213 94% 50%;
+    /* Primary brand colors - Indian flag saffron */
+    --primary: 25 100% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 213 94% 45%;
-    --primary-light: 213 94% 96%;
-    --primary-dark: 213 94% 35%;
+    --primary-hover: 25 100% 55%;
+    --primary-light: 25 100% 96%;
+    --primary-dark: 25 100% 45%;
 
-    /* Secondary colors - Premium success green */
-    --secondary: 142 71% 47%;
+    /* Secondary colors - Indian flag green */
+    --secondary: 140 100% 26%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 142 71% 96%;
-    --secondary-dark: 142 71% 35%;
+    --secondary-light: 140 100% 96%;
+    --secondary-dark: 140 100% 20%;
 
-    /* Accent colors - Premium gold/orange */
-    --accent: 35 91% 55%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 35 91% 96%;
-    --accent-dark: 35 91% 40%;
+    /* Accent colors - Complementary white/cream */
+    --accent: 45 20% 95%;
+    --accent-foreground: 210 20% 8%;
+    --accent-light: 45 20% 98%;
+    --accent-dark: 45 20% 85%;
 
     /* Muted colors - Warmer undertones */
     --muted: 210 30% 95%;
@@ -52,20 +52,20 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --input: 214 25% 92%;
     --ring: 213 94% 50%;
 
-    /* Premium gradients with multiple stops */
-    --gradient-primary: linear-gradient(135deg, hsl(213 94% 50%) 0%, hsl(213 94% 45%) 50%, hsl(213 94% 40%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(142 71% 47%) 0%, hsl(142 71% 42%) 50%, hsl(142 71% 37%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(213 94% 50%) 0%, hsl(180 94% 50%) 50%, hsl(142 71% 47%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(35 91% 55%) 0%, hsl(35 91% 50%) 100%);
+    /* Premium gradients with Indian flag colors */
+    --gradient-primary: linear-gradient(135deg, hsl(25 100% 60%) 0%, hsl(25 100% 55%) 50%, hsl(25 100% 50%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(140 100% 26%) 0%, hsl(140 100% 22%) 50%, hsl(140 100% 18%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(25 100% 60%) 0%, hsl(45 20% 95%) 50%, hsl(140 100% 26%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 20% 95%) 0%, hsl(45 20% 90%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(210 20% 99%) 0%, hsl(210 30% 97%) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(210 20% 96%) 100%);
     
-    /* Professional shadows with color tinting */
-    --shadow-soft: 0 2px 8px hsl(213 50% 20% / 0.08), 0 1px 3px hsl(213 50% 20% / 0.12);
-    --shadow-medium: 0 4px 16px hsl(213 50% 20% / 0.12), 0 2px 8px hsl(213 50% 20% / 0.16);
-    --shadow-strong: 0 8px 32px hsl(213 50% 20% / 0.16), 0 4px 16px hsl(213 50% 20% / 0.20);
-    --shadow-glow: 0 0 20px hsl(213 94% 50% / 0.3);
-    --shadow-premium: 0 20px 40px hsl(213 50% 20% / 0.15), 0 8px 16px hsl(213 50% 20% / 0.10);
+    /* Professional shadows with saffron tinting */
+    --shadow-soft: 0 2px 8px hsl(25 50% 20% / 0.08), 0 1px 3px hsl(25 50% 20% / 0.12);
+    --shadow-medium: 0 4px 16px hsl(25 50% 20% / 0.12), 0 2px 8px hsl(25 50% 20% / 0.16);
+    --shadow-strong: 0 8px 32px hsl(25 50% 20% / 0.16), 0 4px 16px hsl(25 50% 20% / 0.20);
+    --shadow-glow: 0 0 20px hsl(25 100% 60% / 0.3);
+    --shadow-premium: 0 20px 40px hsl(25 50% 20% / 0.15), 0 8px 16px hsl(25 50% 20% / 0.10);
 
     /* Premium animations and transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,24 +106,24 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --popover: 210 25% 8%;
     --popover-foreground: 210 20% 96%;
 
-    /* Primary brand colors - Brighter for dark mode */
-    --primary: 213 94% 58%;
+    /* Primary brand colors - Saffron for dark mode */
+    --primary: 25 100% 65%;
     --primary-foreground: 210 25% 6%;
-    --primary-hover: 213 94% 63%;
-    --primary-light: 213 94% 15%;
-    --primary-dark: 213 94% 45%;
+    --primary-hover: 25 100% 70%;
+    --primary-light: 25 100% 15%;
+    --primary-dark: 25 100% 50%;
 
-    /* Secondary colors - Vibrant for dark */
-    --secondary: 142 71% 52%;
+    /* Secondary colors - Green for dark */
+    --secondary: 140 100% 30%;
     --secondary-foreground: 210 25% 6%;
-    --secondary-light: 142 71% 15%;
-    --secondary-dark: 142 71% 40%;
+    --secondary-light: 140 100% 15%;
+    --secondary-dark: 140 100% 25%;
 
-    /* Accent colors - Gold that pops */
-    --accent: 35 91% 60%;
+    /* Accent colors - Light accent for dark */
+    --accent: 45 20% 90%;
     --accent-foreground: 210 25% 6%;
-    --accent-light: 35 91% 15%;
-    --accent-dark: 35 91% 45%;
+    --accent-light: 45 20% 15%;
+    --accent-dark: 45 20% 80%;
 
     /* Muted colors - Better contrast */
     --muted: 210 25% 12%;
@@ -138,11 +138,11 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --input: 210 25% 14%;
     --ring: 213 94% 58%;
 
-    /* Premium dark gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 94% 58%) 0%, hsl(213 94% 50%) 50%, hsl(213 94% 45%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(142 71% 52%) 0%, hsl(142 71% 45%) 50%, hsl(142 71% 38%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(213 94% 58%) 0%, hsl(180 94% 55%) 50%, hsl(142 71% 52%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(35 91% 60%) 0%, hsl(35 91% 55%) 100%);
+    /* Indian flag dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 100% 65%) 0%, hsl(25 100% 60%) 50%, hsl(25 100% 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(140 100% 30%) 0%, hsl(140 100% 25%) 50%, hsl(140 100% 20%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(25 100% 65%) 0%, hsl(45 20% 90%) 50%, hsl(140 100% 30%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 20% 90%) 0%, hsl(45 20% 85%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(210 25% 8%) 0%, hsl(210 30% 10%) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(210 25% 8%) 0%, hsl(210 25% 6%) 100%);
     
@@ -150,7 +150,7 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.4), 0 1px 3px hsl(0 0% 0% / 0.5);
     --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.5), 0 2px 8px hsl(0 0% 0% / 0.6);
     --shadow-strong: 0 8px 32px hsl(0 0% 0% / 0.6), 0 4px 16px hsl(0 0% 0% / 0.7);
-    --shadow-glow: 0 0 20px hsl(213 94% 58% / 0.4);
+    --shadow-glow: 0 0 20px hsl(25 100% 65% / 0.4);
     --shadow-premium: 0 20px 40px hsl(0 0% 0% / 0.6), 0 8px 16px hsl(0 0% 0% / 0.5);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
