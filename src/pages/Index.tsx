@@ -238,7 +238,7 @@ const Index = () => {
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
-            Ready to Start Your <span className="text-accent">Export Journey?</span>
+            Ready to Start Your Export Journey?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto animate-slide-up">
             Join thousands of Indian exporters who have transformed their business with OneExportAI

@@ -20,24 +20,24 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --popover: 210 20% 99%;
     --popover-foreground: 210 20% 8%;
 
-    /* Primary brand colors - Indian flag saffron */
-    --primary: 25 100% 60%;
+    /* Primary brand colors - OneExportAI Blue */
+    --primary: 210 100% 56%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 25 100% 55%;
-    --primary-light: 25 100% 96%;
-    --primary-dark: 25 100% 45%;
+    --primary-hover: 210 100% 51%;
+    --primary-light: 210 100% 96%;
+    --primary-dark: 210 100% 41%;
 
-    /* Secondary colors - Indian flag green */
-    --secondary: 140 100% 26%;
+    /* Secondary colors - Complementary Teal */
+    --secondary: 185 84% 39%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 140 100% 96%;
-    --secondary-dark: 140 100% 20%;
+    --secondary-light: 185 84% 96%;
+    --secondary-dark: 185 84% 30%;
 
-    /* Accent colors - Complementary white/cream */
-    --accent: 45 20% 95%;
-    --accent-foreground: 210 20% 8%;
-    --accent-light: 45 20% 98%;
-    --accent-dark: 45 20% 85%;
+    /* Accent colors - Light Blue/Cyan */
+    --accent: 195 100% 85%;
+    --accent-foreground: 210 25% 8%;
+    --accent-light: 195 100% 95%;
+    --accent-dark: 195 100% 75%;
 
     /* Muted colors - Warmer undertones */
     --muted: 210 30% 95%;
@@ -52,20 +52,20 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --input: 214 25% 92%;
     --ring: 213 94% 50%;
 
-    /* Premium gradients with Indian flag colors */
-    --gradient-primary: linear-gradient(135deg, hsl(25 100% 60%) 0%, hsl(25 100% 55%) 50%, hsl(25 100% 50%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(140 100% 26%) 0%, hsl(140 100% 22%) 50%, hsl(140 100% 18%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(25 100% 60%) 0%, hsl(45 20% 95%) 50%, hsl(140 100% 26%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(45 20% 95%) 0%, hsl(45 20% 90%) 100%);
+    /* Premium gradients with OneExportAI blue/teal theme */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 56%) 0%, hsl(210 100% 51%) 50%, hsl(210 100% 46%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(185 84% 39%) 0%, hsl(185 84% 34%) 50%, hsl(185 84% 29%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 56%) 0%, hsl(195 100% 85%) 50%, hsl(185 84% 39%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(195 100% 85%) 0%, hsl(195 100% 80%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(210 20% 99%) 0%, hsl(210 30% 97%) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(210 20% 96%) 100%);
     
-    /* Professional shadows with saffron tinting */
-    --shadow-soft: 0 2px 8px hsl(25 50% 20% / 0.08), 0 1px 3px hsl(25 50% 20% / 0.12);
-    --shadow-medium: 0 4px 16px hsl(25 50% 20% / 0.12), 0 2px 8px hsl(25 50% 20% / 0.16);
-    --shadow-strong: 0 8px 32px hsl(25 50% 20% / 0.16), 0 4px 16px hsl(25 50% 20% / 0.20);
-    --shadow-glow: 0 0 20px hsl(25 100% 60% / 0.3);
-    --shadow-premium: 0 20px 40px hsl(25 50% 20% / 0.15), 0 8px 16px hsl(25 50% 20% / 0.10);
+    /* Professional shadows with blue tinting */
+    --shadow-soft: 0 2px 8px hsl(210 50% 20% / 0.08), 0 1px 3px hsl(210 50% 20% / 0.12);
+    --shadow-medium: 0 4px 16px hsl(210 50% 20% / 0.12), 0 2px 8px hsl(210 50% 20% / 0.16);
+    --shadow-strong: 0 8px 32px hsl(210 50% 20% / 0.16), 0 4px 16px hsl(210 50% 20% / 0.20);
+    --shadow-glow: 0 0 20px hsl(210 100% 56% / 0.3);
+    --shadow-premium: 0 20px 40px hsl(210 50% 20% / 0.15), 0 8px 16px hsl(210 50% 20% / 0.10);
 
     /* Premium animations and transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,24 +106,24 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --popover: 210 25% 8%;
     --popover-foreground: 210 20% 96%;
 
-    /* Primary brand colors - Saffron for dark mode */
-    --primary: 25 100% 65%;
+    /* Primary brand colors - OneExportAI Blue for dark mode */
+    --primary: 210 100% 65%;
     --primary-foreground: 210 25% 6%;
-    --primary-hover: 25 100% 70%;
-    --primary-light: 25 100% 15%;
-    --primary-dark: 25 100% 50%;
+    --primary-hover: 210 100% 70%;
+    --primary-light: 210 100% 15%;
+    --primary-dark: 210 100% 50%;
 
-    /* Secondary colors - Green for dark */
-    --secondary: 140 100% 30%;
+    /* Secondary colors - Teal for dark */
+    --secondary: 185 84% 45%;
     --secondary-foreground: 210 25% 6%;
-    --secondary-light: 140 100% 15%;
-    --secondary-dark: 140 100% 25%;
+    --secondary-light: 185 84% 15%;
+    --secondary-dark: 185 84% 35%;
 
-    /* Accent colors - Light accent for dark */
-    --accent: 45 20% 90%;
+    /* Accent colors - Light Blue for dark */
+    --accent: 195 100% 90%;
     --accent-foreground: 210 25% 6%;
-    --accent-light: 45 20% 15%;
-    --accent-dark: 45 20% 80%;
+    --accent-light: 195 100% 15%;
+    --accent-dark: 195 100% 80%;
 
     /* Muted colors - Better contrast */
     --muted: 210 25% 12%;
@@ -138,20 +138,20 @@ All colors MUST be HSL. Premium business theme with sophisticated gradients and 
     --input: 210 25% 14%;
     --ring: 213 94% 58%;
 
-    /* Indian flag dark gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(25 100% 65%) 0%, hsl(25 100% 60%) 50%, hsl(25 100% 55%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(140 100% 30%) 0%, hsl(140 100% 25%) 50%, hsl(140 100% 20%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(25 100% 65%) 0%, hsl(45 20% 90%) 50%, hsl(140 100% 30%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(45 20% 90%) 0%, hsl(45 20% 85%) 100%);
+    /* OneExportAI dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 65%) 0%, hsl(210 100% 60%) 50%, hsl(210 100% 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(185 84% 45%) 0%, hsl(185 84% 40%) 50%, hsl(185 84% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 65%) 0%, hsl(195 100% 90%) 50%, hsl(185 84% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(195 100% 90%) 0%, hsl(195 100% 85%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(210 25% 8%) 0%, hsl(210 30% 10%) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(210 25% 8%) 0%, hsl(210 25% 6%) 100%);
     
-    /* Dark mode shadows with depth */
-    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.4), 0 1px 3px hsl(0 0% 0% / 0.5);
-    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.5), 0 2px 8px hsl(0 0% 0% / 0.6);
-    --shadow-strong: 0 8px 32px hsl(0 0% 0% / 0.6), 0 4px 16px hsl(0 0% 0% / 0.7);
-    --shadow-glow: 0 0 20px hsl(25 100% 65% / 0.4);
-    --shadow-premium: 0 20px 40px hsl(0 0% 0% / 0.6), 0 8px 16px hsl(0 0% 0% / 0.5);
+    /* Dark mode shadows with blue depth */
+    --shadow-soft: 0 2px 8px hsl(210 50% 0% / 0.4), 0 1px 3px hsl(210 50% 0% / 0.5);
+    --shadow-medium: 0 4px 16px hsl(210 50% 0% / 0.5), 0 2px 8px hsl(210 50% 0% / 0.6);
+    --shadow-strong: 0 8px 32px hsl(210 50% 0% / 0.6), 0 4px 16px hsl(210 50% 0% / 0.7);
+    --shadow-glow: 0 0 20px hsl(210 100% 65% / 0.4);
+    --shadow-premium: 0 20px 40px hsl(210 50% 0% / 0.6), 0 8px 16px hsl(210 50% 0% / 0.5);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
