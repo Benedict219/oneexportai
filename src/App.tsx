@@ -14,6 +14,7 @@ import Logistics from "./pages/Logistics";
 import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
 import AuthPage from "./pages/Auth";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
@@ -30,39 +31,53 @@ const App = () => (
             </Layout>
           } />
           <Route path="/dashboard" element={
-            <Layout showNavbar={true}>
-              <Dashboard />
-            </Layout>
+            <ProtectedRoute>
+              <Layout showNavbar={true}>
+                <Dashboard />
+              </Layout>
+            </ProtectedRoute>
           } />
           <Route path="/documentation" element={
-            <Layout showNavbar={true}>
-              <Documentation />
-            </Layout>
+            <ProtectedRoute>
+              <Layout showNavbar={true}>
+                <Documentation />
+              </Layout>
+            </ProtectedRoute>
           } />
           <Route path="/insurance" element={
-            <Layout showNavbar={true}>
-              <Insurance />
-            </Layout>
+            <ProtectedRoute>
+              <Layout showNavbar={true}>
+                <Insurance />
+              </Layout>
+            </ProtectedRoute>
           } />
           <Route path="/buyers" element={
-            <Layout showNavbar={true}>
-              <Buyers />
-            </Layout>
+            <ProtectedRoute>
+              <Layout showNavbar={true}>
+                <Buyers />
+              </Layout>
+            </ProtectedRoute>
           } />
           <Route path="/analytics" element={
-            <Layout showNavbar={true}>
-              <Analytics />
-            </Layout>
+            <ProtectedRoute>
+              <Layout showNavbar={true}>
+                <Analytics />
+              </Layout>
+            </ProtectedRoute>
           } />
           <Route path="/logistics" element={
-            <Layout showNavbar={true}>
-              <Logistics />
-            </Layout>
+            <ProtectedRoute>
+              <Layout showNavbar={true}>
+                <Logistics />
+              </Layout>
+            </ProtectedRoute>
           } />
           <Route path="/training" element={
-            <Layout showNavbar={true}>
-              <Training />
-            </Layout>
+            <ProtectedRoute>
+              <Layout showNavbar={true}>
+                <Training />
+              </Layout>
+            </ProtectedRoute>
           } />
           <Route path="/auth" element={
             <Layout showNavbar={true}>
