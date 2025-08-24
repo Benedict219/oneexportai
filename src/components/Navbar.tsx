@@ -1,13 +1,29 @@
 import React from "react";
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe, FileText, Users, BarChart3, Shield, Truck, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const { data } = await supabase.auth.getUser();
+      setUser(data.user);
+    };
+    getUser();
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+    return () => {
+      listener.subscription.unsubscribe();
+    };
+  }, []);
 
   const navigationItems = [
     { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
@@ -63,9 +79,20 @@ const Navbar = () => {
             <Button variant="outline" size="sm">
               हिंदी / English
             </Button>
-            <Button variant="outline" size="sm">
-              Login
-            </Button>
+            {!user ? (
+              <Link to="/auth">
+                <Button variant="outline" size="sm">
+                  Login
+                </Button>
+              </Link>
+            ) : (
+              <Button variant="outline" size="sm" onClick={async () => {
+                await supabase.auth.signOut();
+                setUser(null);
+              }}>
+                Logout
+              </Button>
+            )}
             <Button size="sm" className="bg-gradient-primary hover:bg-primary-hover">
               Get Started
             </Button>
@@ -112,9 +139,20 @@ const Navbar = () => {
               <Button variant="outline" size="sm" className="w-full">
                 हिंदी / English
               </Button>
-              <Button variant="outline" size="sm" className="w-full">
-                Login
-              </Button>
+              {!user ? (
+                <Link to="/auth" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full">
+                    Login
+                  </Button>
+                </Link>
+              ) : (
+                <Button variant="outline" size="sm" className="w-full" onClick={async () => {
+                  await supabase.auth.signOut();
+                  setUser(null);
+                }}>
+                  Logout
+                </Button>
+              )}
               <Button size="sm" className="w-full bg-gradient-primary hover:bg-primary-hover">
                 Get Started
               </Button>

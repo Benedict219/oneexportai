@@ -13,6 +13,7 @@ import Analytics from "./pages/Analytics";
 import Logistics from "./pages/Logistics";
 import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
+import AuthPage from "./pages/Auth";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +62,11 @@ const App = () => (
           <Route path="/training" element={
             <Layout showNavbar={true}>
               <Training />
+            </Layout>
+          } />
+          <Route path="/auth" element={
+            <Layout showNavbar={true}>
+              <AuthPage />
             </Layout>
           } />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
