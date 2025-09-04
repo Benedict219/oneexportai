@@ -111,6 +111,107 @@ export type Database = {
           },
         ]
       }
+      feedback: {
+        Row: {
+          created_at: string
+          feedback_text: string
+          id: string
+          search_id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          feedback_text: string
+          id?: string
+          search_id: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          feedback_text?: string
+          id?: string
+          search_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "feedback_search_id_fkey"
+            columns: ["search_id"]
+            isOneToOne: false
+            referencedRelation: "searches"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "feedback_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["auth_id"]
+          },
+        ]
+      }
+      searches: {
+        Row: {
+          created_at: string
+          hs_code: string | null
+          id: string
+          product_name: string | null
+          result_data: Json | null
+          search_params: Json | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          hs_code?: string | null
+          id?: string
+          product_name?: string | null
+          result_data?: Json | null
+          search_params?: Json | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          hs_code?: string | null
+          id?: string
+          product_name?: string | null
+          result_data?: Json | null
+          search_params?: Json | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "searches_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["auth_id"]
+          },
+        ]
+      }
+      users: {
+        Row: {
+          auth_id: string
+          created_at: string
+          email: string
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          auth_id: string
+          created_at?: string
+          email: string
+          id?: string
+          updated_at?: string
+        }
+        Update: {
+          auth_id?: string
+          created_at?: string
+          email?: string
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
