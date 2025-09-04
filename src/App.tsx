@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
-import Dashboard from "./pages/Dashboard";
+import OneExportDashboard from "./pages/OneExportDashboard";
 import Documentation from "./pages/Documentation";
 import Insurance from "./pages/Insurance";
 import Buyers from "./pages/Buyers";
@@ -32,9 +32,7 @@ const App = () => (
           } />
           <Route path="/dashboard" element={
             <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <Dashboard />
-              </Layout>
+              <OneExportDashboard />
             </ProtectedRoute>
           } />
           <Route path="/documentation" element={
@@ -79,11 +77,7 @@ const App = () => (
               </Layout>
             </ProtectedRoute>
           } />
-          <Route path="/auth" element={
-            <Layout showNavbar={true}>
-              <AuthPage />
-            </Layout>
-          } />
+          <Route path="/auth" element={<AuthPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

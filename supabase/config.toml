@@ -1,1 +1,7 @@
 project_id = "rbpovprvgoqzjjsaeegt"
+
+[functions.fetch-trade]
+verify_jwt = true
+
+[functions.ai-insights]
+verify_jwt = true
