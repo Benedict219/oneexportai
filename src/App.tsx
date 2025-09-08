@@ -10,7 +10,7 @@ import Documentation from "./pages/Documentation";
 import Insurance from "./pages/Insurance";
 import Buyers from "./pages/Buyers";
 import Analytics from "./pages/Analytics";
-import Logistics from "./pages/Logistics";
+
 import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
 import AuthPage from "./pages/Auth";
@@ -60,13 +60,6 @@ const App = () => (
             <ProtectedRoute>
               <Layout showNavbar={true}>
                 <Analytics />
-              </Layout>
-            </ProtectedRoute>
-          } />
-          <Route path="/logistics" element={
-            <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <Logistics />
               </Layout>
             </ProtectedRoute>
           } />
