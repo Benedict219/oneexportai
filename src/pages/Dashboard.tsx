@@ -1,3 +1,4 @@
+import Layout from "../components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -12,7 +13,10 @@ import {
   Clock,
   AlertCircle,
   CheckCircle,
-  Plus
+  Plus,
+  Brain,
+  Search,
+  BarChart3
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -20,8 +24,9 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Layout showNavbar={true}>
+      <div className="min-h-screen bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2">
@@ -30,6 +35,37 @@ const Dashboard = () => {
           <p className="text-muted-foreground">
             Start your export journey with our comprehensive AI-powered platform.
           </p>
+        </div>
+
+        {/* AI Features Highlight */}
+        <div className="mb-8">
+          <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Brain className="w-6 h-6 text-primary" />
+                AI-Powered Trade Analytics
+              </CardTitle>
+              <CardDescription>
+                Search by product name or HS code to get comprehensive trade analytics and AI-powered insights
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                  <Search className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">Smart Product Search</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                  <BarChart3 className="w-5 h-5 text-secondary" />
+                  <span className="text-sm font-medium">Trade Data Analytics</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                  <Brain className="w-5 h-5 text-accent-foreground" />
+                  <span className="text-sm font-medium">AI Market Insights</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Quick Start Cards */}
@@ -265,7 +301,8 @@ const Dashboard = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+      </div>
+    </Layout>
   );
 };
 

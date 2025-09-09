@@ -60,6 +60,63 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## AI APIs and Features
+
+OneExportAI uses several AI-powered features to provide comprehensive trade analytics:
+
+### 1. Trade Data Search & Analytics
+- **Search Method**: Search by product name or HS code
+- **Data Source**: UN Comtrade API for global trade statistics
+- **Features**: 
+  - Product name to HS code mapping
+  - Top exporters and importers analysis
+  - Yearly trade trends
+  - Market value calculations
+
+### 2. AI-Powered Market Insights
+- **API**: OpenAI GPT-4o-mini
+- **Function**: `ai-insights` edge function
+- **Features**:
+  - Market trend analysis
+  - Risk assessment
+  - Actionable recommendations for exporters
+  - Business intelligence insights
+
+### 3. AI Document Generation
+- **API**: Hugging Face Inference API
+- **Function**: `generate-document` edge function
+- **Features**:
+  - Multilingual document creation
+  - Export documentation automation
+  - Template-based generation
+  - Compliance with international trade standards
+
+### 4. Smart Product Mapping
+- **Technology**: Custom HS code mapping system
+- **Features**:
+  - Product name to HS code conversion
+  - Fuzzy matching for product searches
+  - Support for common export products
+  - Validation of HS codes
+
+### How to Use AI Features:
+
+1. **Trade Analytics**: 
+   - Go to the main dashboard
+   - Search for any product (e.g., "turmeric", "rice") or HS code (e.g., "0910")
+   - Get comprehensive trade data and AI insights
+
+2. **Document Generation**:
+   - Navigate to Documentation → AI Generated tab
+   - Fill in client and product details
+   - Select language (English, Hindi, Tamil, Telugu)
+   - Generate professional export documents
+
+3. **Market Insights**:
+   - After searching for trade data, go to the "AI Insights" tab
+   - Get AI-powered analysis of market trends and opportunities
+   - Receive actionable recommendations for your export business
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/be9855b4-541d-4f21-84b6-a17e948ebf18) and click on Share -> Publish.
