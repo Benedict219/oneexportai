@@ -111,6 +111,93 @@ export type Database = {
           },
         ]
       }
+      document_templates: {
+        Row: {
+          auto_generate: boolean | null
+          created_at: string
+          description: string | null
+          id: string
+          language: string | null
+          name: string
+          template_content: string | null
+          type: string
+          updated_at: string
+        }
+        Insert: {
+          auto_generate?: boolean | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          language?: string | null
+          name: string
+          template_content?: string | null
+          type: string
+          updated_at?: string
+        }
+        Update: {
+          auto_generate?: boolean | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          language?: string | null
+          name?: string
+          template_content?: string | null
+          type?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      documents: {
+        Row: {
+          auto_generate: boolean | null
+          client_country: string | null
+          client_name: string | null
+          content: string | null
+          created_at: string
+          description: string | null
+          id: string
+          language: string | null
+          name: string
+          product_details: string | null
+          status: string | null
+          type: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          auto_generate?: boolean | null
+          client_country?: string | null
+          client_name?: string | null
+          content?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          language?: string | null
+          name: string
+          product_details?: string | null
+          status?: string | null
+          type: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          auto_generate?: boolean | null
+          client_country?: string | null
+          client_name?: string | null
+          content?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          language?: string | null
+          name?: string
+          product_details?: string | null
+          status?: string | null
+          type?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       feedback: {
         Row: {
           created_at: string
