@@ -39,7 +39,7 @@ const AuthPage = () => {
   }, []);
 
   if (user && session) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/" replace />;
   }
 
   const handleSignIn = async (e: React.FormEvent) => {
@@ -85,7 +85,7 @@ const AuthPage = () => {
     setAuthLoading(true);
 
     try {
-      const redirectUrl = `${window.location.origin}/dashboard`;
+      const redirectUrl = `${window.location.origin}/`;
       
       const { error } = await supabase.auth.signUp({
         email: email.trim(),
