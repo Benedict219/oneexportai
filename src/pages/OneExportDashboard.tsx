@@ -6,10 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import SearchBar from '@/components/SearchBar';
-import TradeCharts from '@/components/TradeCharts';
 import AIInsights from '@/components/AIInsights';
-import SearchHistory from '@/components/SearchHistory';
-import TradeTable from '@/components/TradeTable';
 import { getHSCodeFromProduct, getProductFromHSCode, isValidHSCode } from '@/utils/hsCodeMapping';
 
 const OneExportDashboard: React.FC = () => {
@@ -148,71 +145,66 @@ const OneExportDashboard: React.FC = () => {
         </section>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Search History */}
-          <div className="lg:col-span-1">
-            <SearchHistory 
-              onLoadSearch={handleLoadSearch} 
-              triggerRefresh={refreshHistory}
-            />
-          </div>
-
-          {/* Right Column - Results */}
-          <div className="lg:col-span-2">
-            {tradeData ? (
-              <Tabs defaultValue="charts" className="space-y-6">
-                <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="charts">Charts</TabsTrigger>
-                  <TabsTrigger value="tables">Tables</TabsTrigger>
-                  <TabsTrigger value="insights">AI Insights</TabsTrigger>
-                </TabsList>
-
-                <TabsContent value="charts" className="space-y-6">
-                  <TradeCharts data={tradeData} />
-                </TabsContent>
-
-                <TabsContent value="tables" className="space-y-6">
-                  <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                    <TradeTable 
-                      data={tradeData.top_exporters} 
-                      title="Top Exporters" 
-                      type="exporters"
-                    />
-                    <TradeTable 
-                      data={tradeData.top_importers} 
-                      title="Top Importers" 
-                      type="importers"
-                    />
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="insights" className="space-y-6">
-                  <AIInsights 
-                    tradeData={tradeData}
-                    productName={tradeData.product_name}
-                    hsCode={tradeData.hs_code}
-                  />
-                </TabsContent>
-              </Tabs>
-            ) : (
-              <Card className="h-96 flex items-center justify-center bg-gradient-to-br from-muted/30 to-muted/10">
-                <CardContent className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Welcome to OneExport AI</h3>
-                  <p className="text-muted-foreground mb-4 max-w-md">
-                    Search for any product or HS code to get comprehensive trade analytics 
-                    and AI-powered market insights.
-                  </p>
-                  <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                    <Users className="h-4 w-4" />
-                    <span>Powered by UN Comtrade & OpenAI</span>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-          </div>
+        <div className="max-w-3xl mx-auto">
+          {tradeData ? (
+            <>
+              {/* Summary Section: import/export stats */}
+              <div className="mb-6 p-4 bg-white/80 rounded shadow border border-border">
+                <h2 className="text-xl font-bold mb-2 text-primary">Trade Summary</h2>
+                <ul className="list-disc ml-6 text-base">
+                  <li>
+                    <span className="font-semibold">HS Code:</span> {tradeData.hs_code}
+                  </li>
+                  <li>
+                    <span className="font-semibold">Product:</span> {tradeData.product_name}
+                  </li>
+                  {typeof tradeData.total_trade_value === 'number' && tradeData.total_trade_value > 0 && (
+                    <li>
+                      <span className="font-semibold">Total Trade Value:</span> ${tradeData.total_trade_value.toLocaleString()}
+                    </li>
+                  )}
+                  {tradeData.top_importers && tradeData.top_importers.length > 0 && (
+                    <li>
+                      <span className="font-semibold">Top Importer:</span> {tradeData.top_importers[0].country} (${tradeData.top_importers[0].value?.toLocaleString()})
+                    </li>
+                  )}
+                  {tradeData.yearly_trend && tradeData.yearly_trend.length > 1 && (() => {
+                    const first = tradeData.yearly_trend[0];
+                    const last = tradeData.yearly_trend[tradeData.yearly_trend.length - 1];
+                    const percentChange = first.value ? (((last.value - first.value) / first.value) * 100).toFixed(2) : null;
+                    return (
+                      <li>
+                        <span className="font-semibold">Export Value Change ({first.year} to {last.year}):</span> {percentChange ? `${percentChange}%` : 'N/A'}
+                      </li>
+                    );
+                  })()}
+                </ul>
+              </div>
+              {/* AI Insights Only */}
+              <AIInsights 
+                tradeData={tradeData}
+                productName={tradeData.product_name}
+                hsCode={tradeData.hs_code}
+              />
+            </>
+          ) : (
+            <Card className="h-96 flex items-center justify-center bg-gradient-to-br from-muted/30 to-muted/10">
+              <CardContent className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Welcome to OneExport AI</h3>
+                <p className="text-muted-foreground mb-4 max-w-md">
+                  Search for any product or HS code to get comprehensive trade analytics 
+                  and AI-powered market insights.
+                </p>
+                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                  <Users className="h-4 w-4" />
+                  <span>Powered by UN Comtrade & OpenAI</span>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </div>
     </div>

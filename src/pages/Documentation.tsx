@@ -168,10 +168,20 @@ const Documentation = () => {
   };
 
   const handleDownloadDocument = (doc: any) => {
-    toast({
-      title: "Download",
-      description: `Downloading ${doc.name}...`,
-    });
+    if (doc.file_url) {
+      const link = document.createElement('a');
+      link.href = doc.file_url;
+      link.download = doc.name || 'document';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      toast({
+        title: "Download",
+        description: "No file available for download.",
+        variant: "destructive",
+      });
+    }
   };
 
   const generateDocumentWithAI = async () => {

@@ -32,7 +32,9 @@ const App = () => (
           } />
           <Route path="/dashboard" element={
             <ProtectedRoute>
-              <OneExportDashboard />
+              <Layout showNavbar={true}>
+                <OneExportDashboard />
+              </Layout>
             </ProtectedRoute>
           } />
           <Route path="/documentation" element={
