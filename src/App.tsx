@@ -31,46 +31,34 @@ const App = () => (
             </Layout>
           } />
           <Route path="/dashboard" element={
-            <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <OneExportDashboard />
-              </Layout>
-            </ProtectedRoute>
+            <Layout showNavbar={true}>
+              <OneExportDashboard />
+            </Layout>
           } />
           <Route path="/documentation" element={
-            <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <Documentation />
-              </Layout>
-            </ProtectedRoute>
+            <Layout showNavbar={true}>
+              <Documentation />
+            </Layout>
           } />
           <Route path="/insurance" element={
-            <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <Insurance />
-              </Layout>
-            </ProtectedRoute>
+            <Layout showNavbar={true}>
+              <Insurance />
+            </Layout>
           } />
           <Route path="/buyers" element={
-            <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <Buyers />
-              </Layout>
-            </ProtectedRoute>
+            <Layout showNavbar={true}>
+              <Buyers />
+            </Layout>
           } />
           <Route path="/analytics" element={
-            <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <Analytics />
-              </Layout>
-            </ProtectedRoute>
+            <Layout showNavbar={true}>
+              <Analytics />
+            </Layout>
           } />
           <Route path="/training" element={
-            <ProtectedRoute>
-              <Layout showNavbar={true}>
-                <Training />
-              </Layout>
-            </ProtectedRoute>
+            <Layout showNavbar={true}>
+              <Training />
+            </Layout>
           } />
           <Route path="/auth" element={<AuthPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
